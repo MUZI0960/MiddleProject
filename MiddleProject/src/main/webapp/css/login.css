@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+
+.modalCloseBtn{
+	float: right;
+}
+#loginDorunImg{
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+#loginDorunImg img{
+	width: 150px;
+	height: 150px;
+}
+#loginInputs{
+	text-align: center;
+}
+#loginInputs input{
+	width: 230px;
+   	height:40px;
+    border-radius: 5%;
+    border: none;
+	margin-bottom: 4px;
+	font-size: 12px;
+	background-color: #ececec;
+	
+}
+#loginInputs input[type="button"]{
+	background-color: #CCD6A6;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#loginAtags{
+	text-align: center;
+}
+#loginAtags a{
+	font-size:14px;
+	text-decoration:underline;
+	cursor: pointer;
+}
+#loginAtags a:hover{
+	color: #F09287;
+}
+#kakaoLoginBtn{
+	margin-top:20px;
+	margin-bottom: 20px;
+}
+#closeBtn{
+   display: none;
+}
+#closeBtn + label{
+   display : block;
+   width: 30px;
+   height: 10px;
+   position: relative;
+   cursor: pointer;
+}
+#closeBtn + label span{
+   dispaly : block;
+   position : absolute;
+   width: 100%;
+   height: 5px;
+   border-radius: 30px;
+   background: #413F42;
+}
+#closeBtn + label span:nth-child(1) {
+   top:50%;
+   transform:translateY(-50%) rotate(45deg);
+}
+#closeBtn + label span:nth-child(2) {
+   top:50%;
+   transform:translateY(-50%) rotate(-45deg);
+}
+.atag{
+   font-size: 15px;
+   margin: 0px 0px 0px 0px;
+}
+.orspan{
+   padding-top: 5px;
+   display: block;
+   width: 50px;
+   height: 2px;
+   background-color: gray;
+}
+.hr-sect {
+   display: flex;
+   flex-basis: 100%;
+   align-items: center;
+   color: rgba(0, 0, 0, 0.35);
+   font-size: 12px;
+   margin: 8px 0px;
+}
+.hr-sect::before,
+.hr-sect::after {
+   content: "";
+   flex-grow: 1;
+   background: rgba(0, 0, 0, 0.35);
+   height: 1px;
+   font-size: 0px;
+   line-height: 0px;
+   margin: 0px 16px;
+}

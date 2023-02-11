@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <!DOCTYPE sqlMap
+ 	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+ 	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+ 
+ <sqlMap namespace="question">
+ 	
+ 	<select id="getAllQuestionList" resultClass="questionVo">
+ 		select 
+			q.q_key, q.q_title, NVL(q.answer_key,0) as answer_key, m.mem_nick, q.q_date, q.q_view
+		from question q, member m
+		where q.mem_key = m.mem_key
+		order by q.q_key desc
+ 	
+ 	</select>
+ 	
+ 	<select id="getQuestionByKey" resultClass="questionVo" parameterClass="int">
+ 		select q.q_key, m.mem_nick, q.q_title, q.q_content, q.q_date, q.q_view, NVL(q.answer_key,0) as answer_key
+		from question q, member m 
+		where q.mem_key=m.mem_key
+		and q.q_key=#Q_KEY#
+ 	</select>
+ 	
+	
+	<select id="getAnswerByKey" resultClass="q_answerVo" parameterClass="int">
+		select * from q_answer where answer_key=ANSWER_KEY#
+	</select>
+
+ </sqlMap>	
+ 	
+ 
